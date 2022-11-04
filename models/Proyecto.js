@@ -41,7 +41,7 @@ const ProyectoSchema = Schema({
     },
     tipoProyecto:{
         type:Schema.Types.ObjectId,
-        ref:'TipoCliente',
+        ref:'TipoProyecto',
         required:true
     },
     universidad:{

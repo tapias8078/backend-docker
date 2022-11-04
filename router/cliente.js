@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const Cliente = require('../models/Cliente')
-const {validarCliente} = require('../helpers/validar-Cliente')
+const {validarCliente} = require('../helpers/validar-cliente')
 const router = Router()
 
 

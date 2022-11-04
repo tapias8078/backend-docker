@@ -4,16 +4,6 @@ const {validarProyecto} = require('../helpers/validar-Proyecto')
 const router = Router()
 
 
-router.get('/', async function(req,res){
-    try{
-        const proyectos = await Proyecto.find()
-        res.send(proyectos)
-    }catch(error){
-        console.log(error);
-        res.send('Ocurrio un error')
-    }
-
-})
 router.post('/', async function(req,res){
     try{
         const validaciones = validarProyecto(req)
@@ -65,18 +55,5 @@ router.put('/:proyectoId', async function(req,res){
     }
 })
 
-router.get('/:proyectoId', async function(req, res){
-    try {
-        const proyecto = await Proyecto.findById(req.params.proyectoId)
-        if (!proyecto) {
-            return res.status(404).send('Proyecto no existe')
-                          
-        }
-        res.send(proyecto)
-    } catch (error) {
-        console.log(error);
-        res.status(500).send('Ocurrio un error al consultar Proyecto')
-    }
- })
 
 module.exports = router

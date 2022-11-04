@@ -4,9 +4,7 @@ const TipoProyectoSchema = Schema({
 
     nombre:{
         type:String,
-        required:true,
-        enum:['Ensayo', 'Artículo', 'Monografía', 'Trabajo final de pregrado', 'Trabajo final de especialización'
-        ]
+        required:true        
     },
     fechaCreacion:{
         type:Date,
